@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "106700561453",
+    "project_id": "agri-farm-757bb",
+    "storage_bucket": "agri-farm-757bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:106700561453:android:34501fc9ab5051e35d6ca4",
+        "android_client_info": {
+          "package_name": "com.example.flutter_auth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "106700561453-lqkhdgope1c3dseptla4v971porkqdgr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvHS0V5yQBQkknLsrtXnd66FMh-Dk0u7M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "106700561453-lqkhdgope1c3dseptla4v971porkqdgr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

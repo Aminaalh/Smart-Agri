@@ -6,11 +6,22 @@ import 'package:flutter_auth/components/rounded_button.dart';
 import 'package:flutter_auth/components/rounded_input_field.dart';
 import 'package:flutter_auth/components/rounded_password_field.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:flutter_auth/Screens/authentication_service.dart';
+import 'package:provider/provider.dart';
 
-class Body extends StatelessWidget {
-  const Body({
+class Body extends StatefulWidget {
+  Body({
     Key key,
   }) : super(key: key);
+
+  @override
+  State<Body> createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
+  final TextEditingController emailController = TextEditingController();
+
+  final TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -32,14 +43,23 @@ class Body extends StatelessWidget {
             SizedBox(height: size.height * 0.03),
             RoundedInputField(
               hintText: "Your Email",
+              controller: emailController,
               onChanged: (value) {},
             ),
             RoundedPasswordField(
+              controller: passwordController,
               onChanged: (value) {},
             ),
             RoundedButton(
               text: "LOGIN",
-              press: () {},
+              press: () {
+                context.read<AuthenticationService>().signIn(
+                      email: emailController.text.trim(),
+                      password: passwordController.text.trim(),
+                    );
+                print("kfdk");
+                return "sign in";
+              },
             ),
             SizedBox(height: size.height * 0.03),
             AlreadyHaveAnAccountCheck(
