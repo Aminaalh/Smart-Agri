@@ -8,6 +8,7 @@ import 'package:flutter_auth/components/rounded_password_field.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_auth/Screens/authentication_service.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_auth/Screens/home/home_screen.dart';
 
 class Body extends StatefulWidget {
   Body({
@@ -57,8 +58,14 @@ class _BodyState extends State<Body> {
                       email: emailController.text.trim(),
                       password: passwordController.text.trim(),
                     );
-                print("kfdk");
-                return "sign in";
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return HomeScreen();
+                    },
+                  ),
+                );
               },
             ),
             SizedBox(height: size.height * 0.03),

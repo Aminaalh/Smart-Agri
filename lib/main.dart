@@ -3,8 +3,13 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_auth/Screens/login/login_screen.dart';
 import 'package:flutter_auth/Screens/signup/signup_screen.dart';
-
 import 'package:flutter_auth/Screens/authentication_service.dart';
+
+import 'package:flutter_auth/Screens/home/home_screen.dart';
+import 'package:flutter_auth/Screens/home/map_screen.dart';
+import 'package:flutter_auth/Screens/home/menu_screen.dart';
+import 'package:flutter_auth/Screens/home/location_screen.dart';
+import 'package:flutter_auth/Screens/home/qrscan_screen.dart';
 
 import 'package:provider/provider.dart';
 
@@ -35,6 +40,15 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
         home: AuthenticationWrapper(),
+        initialRoute: 'flutter_auth',
+        routes: {
+          'login_screen': (context) => LoginScreen(),
+          'home_screen': (context) => HomeScreen(),
+          'location_screen': (context) => LocationScreen(),
+          'qrscan_screen': (context) => QRScanScreen(),
+          'menu_screen': (context) => MenuScreen(),
+          'map_screen': (context) => MapScreen()
+        },
       ),
     );
   }
